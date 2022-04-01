@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Shell from './Shell';
 import Sidebar from './components/Sidebar';
+import { GlobalStyle } from './styles/global';
 
 const Container = styled.div`
   background: #121212;
@@ -23,6 +24,7 @@ const App = () => {
 
   return (
     <React.Suspense fallback={'Loading'}>
+      <GlobalStyle />
       <ContainerComponent>
         <Sidebar />
         <div style={{ color: '#FFF' }}>
