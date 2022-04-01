@@ -28,7 +28,7 @@ export const GlobalStyle = createGlobalStyle`
   select,
   button {
     font: 400 1rem;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
   button {

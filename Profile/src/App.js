@@ -8,8 +8,9 @@ const App = () => {
   return (
     <React.Suspense fallback={'Loading'}>
       <GlobalStyle />
-      <Shell />
-      <Profile />
+      <Shell>
+        <Profile />
+      </Shell>
     </React.Suspense>
   );
 };
