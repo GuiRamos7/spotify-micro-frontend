@@ -1,8 +1,5 @@
 {
-  "name": "spotify-micro-frontend",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "private": true,
   "scripts": {
     "start": "lerna run --scope @shared-routing/* --parallel start",
     "build": "lerna run --scope @shared-routing/* build",
@@ -10,6 +7,13 @@
     "clean": "lerna run --scope @shared-routing/* --parallel clean"
   },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^4.0.0"
+  },
+  "workspaces": {
+    "packages": [
+      "shell",
+      "songlist",
+      "profile"
+    ]
   }
 }
