@@ -12,7 +12,7 @@ module.exports = {
       directory: path.resolve(__dirname, 'public'),
     },
     compress: true,
-    port: 3000,
+    port: 3002,
     historyApiFallback: true,
     hot: false,
     headers: {
@@ -53,14 +53,13 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'shell',
+      name: 'profile',
       filename: 'remoteEntry.js',
       exposes: {
-        './Shell': './src/Shell',
+        './Profile': './src/Profile',
       },
       remotes: {
-        songList: 'songlist@http://localhost:3001/remoteEntry.js',
-        profile: 'profile@http://localhost:3002/remoteEntry.js',
+        shell: 'shell@http://localhost:3000/remoteEntry.js',
       },
       shared: [
         {

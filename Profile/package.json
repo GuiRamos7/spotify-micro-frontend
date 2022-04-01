@@ -1,5 +1,5 @@
 {
-  "name": "@shared-routing/shell",
+  "name": "@shared-routing/profile",
   "version": "0.0.0",
   "private": true,
   "devDependencies": {
@@ -19,7 +19,7 @@
   "scripts": {
     "dev": "webpack serve",
     "build": "webpack --mode production",
-    "serve": "serve dist -p 3000",
+    "serve": "serve dist -p 3001",
     "clean": "rm -rf dist"
   },
   "dependencies": {
@@ -27,7 +27,6 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router": "6.0.0-beta.0",
-    "react-router-dom": "^6.3.0",
-    "styled-components": "^5.3.5"
+    "react-router-dom": "^6.3.0"
   }
 }

@@ -27,7 +27,7 @@ const SongList = () => {
     <div>
       {dbSongList.map((el) => {
         return (
-          <div>
+          <div key={el.name}>
             <p>Name: {el.name}</p>
             <p>artist: {el.artist}</p>
             <img
