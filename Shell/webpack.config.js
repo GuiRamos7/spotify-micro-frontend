@@ -56,7 +56,7 @@ module.exports = {
       name: 'shell',
       filename: 'remoteEntry.js',
       exposes: {
-        './Shell': './src/Shell',
+        './Shell': './src/components/Shell',
       },
       remotes: {
         songList: 'songlist@http://localhost:3001/remoteEntry.js',

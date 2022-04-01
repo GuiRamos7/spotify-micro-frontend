@@ -1,16 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
-import Shell from './Shell';
-import Sidebar from './components/Sidebar';
+import Shell from './components/Shell';
 import { GlobalStyle } from './styles/global';
-
-const Container = styled.div`
-  background: #121212;
-  display: grid;
-  width: 100%;
-  height: 100%;
-  grid-template-columns: 240px 1fr;
-`;
 
 const ContainerComponent = ({ children }) => {
   return <Container>{children}</Container>;
@@ -25,14 +15,12 @@ const App = () => {
   return (
     <React.Suspense fallback={'Loading'}>
       <GlobalStyle />
-      <ContainerComponent>
-        <Sidebar />
-        <div style={{ color: '#FFF' }}>
+      <Shell>
+        <div>
           <Profile />
-          <Shell />
           <SongList />
         </div>
-      </ContainerComponent>
+      </Shell>
     </React.Suspense>
   );
 };
