@@ -29,8 +29,8 @@ const Sidebar = () => {
         </svg>
       </div>
       <S.ShortCutButtonList>
-        {shortcutItems.map((item) => (
-          <li>
+        {shortcutItems.map((item, idx) => (
+          <li key={idx}>
             <button>
               <item.icon />
               <span>{item.text}</span>
