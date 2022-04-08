@@ -50,7 +50,7 @@ export const MostListenList = styled.ul`
       }
       /* #a7a7a7 */
       img {
-        width: 35px;
+        width: 40px;
         margin: 0 16px;
       }
 

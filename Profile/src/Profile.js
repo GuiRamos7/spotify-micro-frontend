@@ -3,7 +3,7 @@ import { AiFillPlayCircle } from 'react-icons/ai';
 import { MdOutlineMoreHoriz } from 'react-icons/md';
 import styled from 'styled-components';
 
-import { Header, MostListen } from './components';
+import { Header, MostListen, ArtistChoice } from './components';
 
 const Container = styled.div`
   .actions-button {
@@ -38,6 +38,24 @@ const Container = styled.div`
       text-transform: uppercase;
     }
   }
+  .content {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+
+    ul {
+      grid-column: span min(6 - 2, 6);
+    }
+
+    & > div {
+      grid-column: span 2;
+    }
+
+    @media (max-width: 1300px) {
+      ul {
+        grid-column: span 6;
+      }
+    }
+  }
 `;
 
 const Profile = () => {
@@ -49,7 +67,10 @@ const Profile = () => {
         <button>FOLLOW</button>
         <MdOutlineMoreHoriz className='icon-more' />
       </div>
-      <MostListen />
+      <div className='content'>
+        <MostListen />
+        <ArtistChoice />
+      </div>
     </Container>
   );
 };
